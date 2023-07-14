@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <div id="win">
+        <p class="winner hide">The Winner is</p>
+        <p class="x-text sign hide">X</p>
+        <p class="o-text sign hide">O</p>
+        <p class="winner draw hide">It's a Draw</p>
+    </div>
+    <div id="content" class="unblur">
+        <div id="difficulty" class="item">
+            <form id="form">
+                <select name="levels" id="levels">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="unbeatable">Unbeatable</option>
+                </select>
+            </form>
+        </div>
+        <div id="player" class="item">
+            <button id="x" class="btn active">X</button>
+            <button id="o" class="btn inactive">O</button>
+        </div>
+        <div id="board" class="item">
+            <button class="square">
+                <p></p>
+            </button>
+            <button class="square">
+                <p></p>
+            </button>
+            <button class="square no-r">
+                <p></p>
+            </button>
+            <button class="square">
+                <p></p>
+            </button>
+            <button class="square">
+                <p></p>
+            </button>
+            <button class="square no-r">
+                <p></p>
+            </button>
+            <button class="square no-b">
+                <p></p>
+            </button>
+            <button class="square no-b">
+                <p></p>
+            </button>
+            <button class="square no-b no-r">
+                <p></p>
+            </button>
+
+        </div>
+        <div id="restart" class="item">
+            <button id="rstBtn" class="btn">Restart</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright ©
+            <script>document.write(new Date().getFullYear())</script> MuhammadMarmash
+        </p>
+        <a href="https://github.com/MuhammadMarmash" target="_blank"><i class="fab fa-github"
+                aria-hidden="true"></i></a>
+    </footer>
+</body>
+
+</html>

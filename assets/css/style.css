@@ -1,0 +1,221 @@
+:root {
+    --border: 1px solid #d3d3d3;
+    --border-color: #203647;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+.active:hover {
+    filter: brightness(100%);
+    cursor: alias;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: filter 0.15s ease-in-out;
+}
+
+button,
+input {
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 10px auto;
+    border: var(--border);
+    border-radius: 10px;
+}
+
+.item {
+    margin: 0.4em;
+}
+
+#difficulty {
+    align-self: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#form {
+    display: flex;
+    align-items: center;
+}
+
+#levels {
+    outline: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--border-color);
+    appearance: none;
+}
+
+.active {
+    border: 2px solid var(--border-color);
+
+}
+
+.inactive {
+    color: #808080;
+    border-width: 1.5px;
+    border: 1px solid #d3d3d3;
+}
+
+.active,
+.inactive {
+    width: 15em;
+    height: 2.5em;
+    margin: 1em 1em 1em 1em;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    justify-content: center;
+    background-color: #553d67;
+    width: 100%;
+    padding: 1em 0 1em 0;
+}
+
+.square {
+    font-weight: 600;
+    font-size: 54px;
+    border-bottom: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+    background-color: #553d67;
+}
+
+.no-r {
+    border-right: none;
+}
+
+.no-b {
+    border-bottom: none;
+}
+
+#win p {
+    font-weight: 600;
+    color: white;
+    z-index: 1;
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.hide {
+    display: none;
+}
+
+.sign {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, 0);
+    font-size: 150px;
+    margin: 0;
+}
+
+.winner {
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, 0);
+    font-size: 35px;
+}
+
+.puff-in-center {
+    -webkit-animation: puff-in-center 0.35s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+    animation: puff-in-center 0.35s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+}
+
+.blur {
+    -webkit-animation: blur 0.7s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(5px);
+    }
+}
+
+.unblur {
+    -webkit-animation: unblur 0.5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes unblur {
+    0% {
+        -webkit-filter: blur(5px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+    }
+}
+
+/* footer area */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    font-size: 20px;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.fa-github {
+    color: black;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
