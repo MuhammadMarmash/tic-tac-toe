@@ -14,15 +14,19 @@
 
 <body>
     <div id="win">
-        <p class="winner hide">The Winner is</p>
-        <p class="x-text sign hide">X</p>
-        <p class="o-text sign hide">O</p>
-        <p class="winner draw hide">It's a Draw</p>
+        <p class="winner hide" id="winner">The Winner is</p>
+        <p class="sign hide" id="x-text">X</p>
+        <p class="sign hide" id="o-text">O</p>
+        <p class="winner hide" id="draw">It's a Draw</p>
     </div>
-    <div id="content" class="unblur">
+    <div id="content">
         <div id="difficulty" class="item">
             <form id="form">
-                <select name="levels" id="levels">
+                <select name="levels" id="mode">
+                    <option value="human">VS Human</option>
+                    <option value="ai">VS Ai</option>
+                </select>
+                <select name="levels" id="levels" class="not-mode">
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
@@ -75,6 +79,8 @@
         <a href="https://github.com/MuhammadMarmash" target="_blank"><i class="fab fa-github"
                 aria-hidden="true"></i></a>
     </footer>
+    <div class="overlay" id="overlay"></div>
+
 </body>
 
 </html>

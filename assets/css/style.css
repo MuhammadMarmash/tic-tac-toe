@@ -57,6 +57,10 @@ input {
     margin: 0.4em;
 }
 
+.not-mode {
+    display: none;
+}
+
 #difficulty {
     align-self: flex-start;
     margin-top: 0;
@@ -66,9 +70,10 @@ input {
 #form {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
-#levels {
+select {
     outline: none;
     border: none;
     border-radius: 0px;
@@ -153,39 +158,18 @@ input {
     font-size: 35px;
 }
 
-.puff-in-center {
-    -webkit-animation: puff-in-center 0.35s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
-    animation: puff-in-center 0.35s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.blur {
-    -webkit-animation: blur 0.7s;
-    -webkit-animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes blur {
-    0% {
-        -webkit-filter: blur(0px);
-    }
-
-    100% {
-        -webkit-filter: blur(5px);
-    }
-}
-
-.unblur {
-    -webkit-animation: unblur 0.5s;
-    -webkit-animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes unblur {
-    0% {
-        -webkit-filter: blur(5px);
-    }
-
-    100% {
-        -webkit-filter: blur(0px);
-    }
+.overlay.activee {
+    display: block;
 }
 
 /* footer area */
