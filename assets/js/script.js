@@ -10,6 +10,7 @@ const oText = document.querySelector("#o-text");
 const drawText = document.querySelector("#draw");
 const content = document.querySelector("#content");
 const overlay = document.querySelector(".overlay");
+//hello
 let currentSymbol = "x";
 let aiSymbol = "o";
 let mode = "human";
